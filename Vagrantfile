@@ -11,7 +11,10 @@ Vagrant.configure("2") do |config|
 
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
-  config.vm.provision "install_packages",
+    config.vm.synced_folder "files", "/files"
+
+
+    config.vm.provision "install_packages",
     type: "shell",
     path: "scripts/01_install_packages.sh"
 
