@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "generic/debian12"
+  config.vm.box = "bento/debian-12"
 
   config.vm.provider "vmware_desktop" do |vmware|
     vmware.gui = false
